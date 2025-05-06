@@ -1,12 +1,66 @@
-*{
+body{
   background-color: #5D93DA ;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1%;
 }
+ /*burger css lukket*/
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  cursor:pointer;
+}
+.burger-bar {
+  width: 30px;
+  height: 12px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid black;
+}
+
+/* BurgerMeny åpnet */
+.headerNav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.headerNav.show {
+  display: block;
+  opacity: 0.8;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border-radius: 20px;
+
+}
+.headerNavButton {
+  display: block;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px 0;
+  border-radius: 20px;
+}
+.headerNavButton:hover {
+  background-color: rgb(86, 157, 238);
+ border-radius: 20px;
+}
+
 
 
 .heroSection {
@@ -21,9 +75,8 @@
 
 .yellow-background {
   background-color: yellow;
-  padding: 20px; /* Litt luft rundt bildet */
-  border-radius: 50%;
-  display: inline-block; /* Sørger for at padding vises */
+/* Litt luft rundt bildet */
+border-radius: 50px;
 }
 
 .slide {
@@ -83,6 +136,11 @@
   gap: 10px;
   background-color: black;
 }
+
+#easteregg2 {
+  transition: background-color 0.5s ease;
+}
+
 
 .footerEnd {
   display: flex;
