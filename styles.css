@@ -11,20 +11,22 @@ body{
   padding: 1%;
 }
  /*burger css lukket*/
-.burger-icon {
+ .burger-icon {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20px;
-  width: 30px;
-  cursor:pointer;
 }
+
 .burger-bar {
-  width: 30px;
-  height: 12px;
+  height: 4px;
+  width: 100%;
   background-color: white;
-  border-radius: 5px;
-  border: solid black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 /* BurgerMeny åpnet */
@@ -109,6 +111,9 @@ border-radius: 50px;
 
 .heroImg {
   width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 60% / 60%;
 }
 
 .footer {

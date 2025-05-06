@@ -24,4 +24,4 @@ if (logo2 && container2) {
   logo2.addEventListener("click", function () {
     container2.classList.toggle("yellow-background");
   });
-}
+} 
