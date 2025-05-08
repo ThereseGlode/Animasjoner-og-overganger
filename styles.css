@@ -1,14 +1,21 @@
-body{
-  background-color: #5D93DA ;
+/* ======================
+   Grunnleggende styling
+====================== */
+body {
+  background-color: #5D93DA;
   padding-left: 5%;
   padding-right: 5%;
 }
 
+/* ======================
+   Header og navigasjon
+====================== */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1%;
+  position: relative;
 }
  /*burger css lukket*/
  .burger-icon {
@@ -27,15 +34,14 @@ body{
   background-color: white;
   border-radius: 2px;
   transition: all 0.3s ease;
+  
 }
 
 /* BurgerMeny åpnet */
-
 .headerNav {
   opacity: 0;
   visibility: hidden;
   max-height: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
   overflow: hidden;
   position: absolute;
   top: 60px;
@@ -44,14 +50,18 @@ body{
   padding: 10px;
   border-radius: 20px;
   z-index: 10;
+  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
 }
+
 
 .headerNav.show {
-  opacity: 1;
+  display: block;
+  opacity: 0.8;
   visibility: visible;
-  max-height: 500px;
-}
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border-radius: 20px;
 
+}
 .headerNavButton {
   display: block;
   padding: 5px;
@@ -62,6 +72,8 @@ body{
   margin: 10px 0;
   border-radius: 20px;
 }
+
+
 .headerNavButton:hover {
   background-color: rgb(86, 157, 238);
  border-radius: 20px;
@@ -69,40 +81,18 @@ body{
 
 
 
+/* ======================
+   Hero-seksjon
+====================== */
 .heroSection {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#easteregg {
-  transition: background-color 0.5s ease;
-}
-
-.yellow-background {
-  background-color: yellow;
-/* Litt luft rundt bildet */
-border-radius: 50px;
-}
-
-.slide {
-
-    width: 122px;
-    height: 50px;
-  
-  
-    animation-name: slide;
-    animation-duration: 5s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  
-}
-
-
 .heroIntro {
   display: flex;
-  flex-direction: row; /*ikke nødvendig men gir et viuelt hjelp i inspect*/
+  flex-direction: row;
 }
 
 .heroText {
@@ -118,11 +108,7 @@ border-radius: 50px;
   height: 50%;
   object-fit: cover;
   border-radius: 60% / 60%;
-}
-
-.heroImg {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .heroImg:hover {
@@ -130,113 +116,34 @@ border-radius: 50px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Seksjon 2 typewriter effekt */
-.typewriter {
-  font-size: 2rem;
-  font-family: monospace;
-  color: white;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid white;
-  width: 36ch;
-  animation: typing 4s steps(36) 1s forwards, blink 0.7s step-end 5;
+/* Slide-animasjon */
+.slide {
+  width: 122px;
+  height: 50px;
+  animation: slide 5s ease-in forwards;
 }
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 36ch;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-/* Footer endgame  */
-
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footerNav {
-  display: flex;
-  gap: 10px;
-}
-
-.buttonSoMe:hover {
-  background-color: rgb(45, 146, 235);
-}
-
-.buttonSoMe {
-  display: flex;
-  font-size: medium;
-  padding: 5px;
-  border: solid; 
-  color: white;
-  border-radius: 50px;
-  gap: 10px;
-  background-color: black;
-}
-
-#easteregg2 {
-  transition: background-color 0.5s ease;
-}
-
-
-.footerEnd {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-
 
 @keyframes slide {
-from {
-  transform: translateX(-1000px);
-}
-to {
-  transform: translateX(0);
-}
-}
-
-.burger-icon.active .burger-bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-.burger-icon.active .burger-bar:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-icon.active .burger-bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.burger-bar {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 4px;
-  transition: all 0.3s ease;
-}
-
-/* Seksjon 2 typewriter effekt */
+/* ======================
+   Typewriter-effekt
+====================== */
 .typewriter {
   font-size: 2rem;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid white;
   width: 35ch;
-  animation: typing 4s steps(36) 1s forwards, blink 0.7s step-end 5;
+  animation: typing 4s steps(35) 1s forwards, blink 0.7s step-end 5;
 }
 
 @keyframes typing {
@@ -254,23 +161,9 @@ to {
   }
 }
 
-
-/* Media Query */
-
-@media (max-width: 425px) {
-  .heroIntro {
-    flex-direction: column-reverse;
-  }
-
-  .heroText, .heroImg {
-    width: 100%;
-  }
-
-  .footer {
-    flex-direction: column;
-  }
-}
-
+/* ======================
+   Pulsboks (CTA)
+====================== */
 .pulse-box {
   width: 150px;
   height: 150px;
@@ -294,5 +187,85 @@ to {
   }
   50% {
     transform: scale(1.1);
+  }
+}
+
+/* ======================
+   Footer
+====================== */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerNav {
+  display: flex;
+  gap: 10px;
+}
+
+.footerEnd {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttonSoMe {
+  display: flex;
+  font-size: medium;
+  padding: 5px;
+  border: solid;
+  color: white;
+  border-radius: 50px;
+  gap: 10px;
+  background-color: black;
+}
+
+.buttonSoMe:hover {
+  background-color: rgb(45, 146, 235);
+}
+
+/* ======================
+   "Påskegg" fargeklikk
+====================== */
+#easteregg, #easteregg2 {
+  transition: background-color 0.5s ease;
+}
+
+.yellow-background {
+  background-color: yellow;
+  border-radius: 50px;
+}
+
+/* ======================
+   Media Queries
+====================== */
+@media (max-width: 425px) {
+  .heroIntro {
+    flex-direction: column-reverse;
+  }
+
+  .heroText, .heroImg {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .burger-icon {
+    display: none;
+  }
+
+  .headerNav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    visibility: visible;
+    max-height: none;
+    gap: 10px;
   }
 }
