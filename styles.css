@@ -53,15 +53,13 @@ body {
   transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
 }
 
-
 .headerNav.show {
-  display: block;
-  opacity: 0.8;
-  visibility: visible;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  border-radius: 20px;
-
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  max-height: none !important;
 }
+
 .headerNavButton {
   display: block;
   padding: 5px;
@@ -137,7 +135,7 @@ body {
 ====================== */
 .typewriter {
   font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   overflow: hidden;
   white-space: nowrap;
@@ -252,9 +250,12 @@ body {
   .footer {
     flex-direction: column;
   }
+  .hero-typewriter {
+    flex-direction: column;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 4000px) {
   .burger-icon {
     display: none;
   }
