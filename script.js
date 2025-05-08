@@ -25,3 +25,4 @@ if (logo2 && container2) {
     container2.classList.toggle("yellow-background");
   });
 } 
+

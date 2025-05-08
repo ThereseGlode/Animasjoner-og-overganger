@@ -30,24 +30,28 @@ body{
 }
 
 /* BurgerMeny åpnet */
+
 .headerNav {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+  overflow: hidden;
   position: absolute;
   top: 60px;
   right: 20px;
   background-color: #333;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
+  z-index: 10;
 }
 
 .headerNav.show {
-  display: block;
-  opacity: 0.8;
+  opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  border-radius: 20px;
-
+  max-height: 500px;
 }
+
 .headerNavButton {
   display: block;
   padding: 5px;
@@ -116,6 +120,45 @@ border-radius: 50px;
   border-radius: 60% / 60%;
 }
 
+.heroImg {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.heroImg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Seksjon 2 typewriter effekt */
+.typewriter {
+  font-size: 2rem;
+  font-family: monospace;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  width: 36ch;
+  animation: typing 4s steps(36) 1s forwards, blink 0.7s step-end 5;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 36ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Footer endgame  */
+
 .footer {
   display: flex;
   align-items: center;
@@ -153,6 +196,65 @@ border-radius: 50px;
   gap: 10px;
 }
 
+
+
+@keyframes slide {
+from {
+  transform: translateX(-1000px);
+}
+to {
+  transform: translateX(0);
+}
+}
+
+.burger-icon.active .burger-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-icon.active .burger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-icon.active .burger-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.burger-bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Seksjon 2 typewriter effekt */
+.typewriter {
+  font-size: 2rem;
+  font-family:Arial, Helvetica, sans-serif;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  width: 35ch;
+  animation: typing 4s steps(36) 1s forwards, blink 0.7s step-end 5;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
 /* Media Query */
 
 @media (max-width: 425px) {
@@ -169,11 +271,28 @@ border-radius: 50px;
   }
 }
 
-@keyframes slide {
-from {
-  transform: translateX(-1000px);
+.pulse-box {
+  width: 150px;
+  height: 150px;
+  background-color: #9b59b6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease;
 }
-to {
-  transform: translateX(0);
+
+.pulse-box:hover {
+  background-color: #f39c12;
 }
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
