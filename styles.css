@@ -270,3 +270,148 @@ body {
     gap: 10px;
   }
 }
+
+/* ======================
+   Styles css page 2 MERCH
+====================== */
+
+.featured-merch {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+.featured-merch h2 {
+  font-size: 2.5rem;
+  color: #00b7ff;
+  margin-bottom: 20px;
+}
+
+.merch-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.merch-item {
+  background-color: white;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.merch-item:hover {
+  transform: translateY(-10px);
+}
+
+.merch-item img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+.merch-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+.merch-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.btn-buy {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #00b7ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-buy:hover {
+  background-color: #e6cf00;
+}
+
+/* ======================
+Hoppene ikoner 
+====================== */
+
+.bouncy-icons {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+.bouncy-icons h2 {
+  font-size: 2.5rem;
+  color: #008cff;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+.icon-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 3s ease-in-out infinite;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+}
+
+#icon1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+#icon2 {
+  top: 30%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+#icon3 {
+  top: 40%;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+#icon4 {
+  top: 20%;
+  left: 70%;
+  animation-delay: 3s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(30px);
+  }
+}

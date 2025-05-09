@@ -1,19 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Other page</title>
+    <title>Merch</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/page2.html" aria-current="page">Other page</a>
-    </nav>
+    <header class="header">
+      <div id="easteregg">
+        <img id="logo" src="sunrise (1).png" alt="logo illustrasjon av en sol"></div>
+        <!-- Burger ikon for meny -->
+        <div class="burger-icon" id="burger-icon">
+          <div class="burger-bar"></div>
+          <div class="burger-bar"></div>
+          <div class="burger-bar"></div>
+        </div>
+        
+        <!-- Skjult navigasjon -->
+        <nav class="headerNav" id="headerNav">
+          <a href="" class="headerNavButton">Hjem</a>
+          <a href="page2.html" target="_blank" class="headerNavButton">Merch</a>
+          <a href="" class="headerNavButton">Prosjekter</a>
+          <a href="" class="headerNavButton">Gaming</a>
+          <a href="" class="headerNavButton">Pokemon</a>
+        </nav>
+    </header>
     <main>
-      <h1>My other page</h1>
+      <section class="featured-merch">
+        <h2>Favoritter – Nå på Lager!</h2>
+        <div class="merch-items">
+          <div class="merch-item">
+            <img src="pokeball.png" alt="Pokémon T-skjorte" />
+            <h3>Pokémon T-skjorte</h3>
+            <p>Vis frem din kjærlighet for Pokémon med denne stilige t-skjorten!</p>
+            <a href="merch.html" class="btn-buy">Kjøp Nå</a>
+          </div>
+          <div class="merch-item">
+            <img src="pokeball.png" alt="Gaming mus" />
+            <h3>Gaming Mus</h3>
+            <p>Optimalisert for gaming med høy presisjon og komfort.</p>
+            <a href="merch.html" class="btn-buy">Kjøp Nå</a>
+          </div>
+          <div class="merch-item">
+            <img src="pokeball.png" alt="Pokémon Figur" />
+            <h3>Pokémon Samlefigur</h3>
+            <p>Samle din favoritt Pokémon med denne eksklusive figuren.</p>
+            <a href="merch.html" class="btn-buy">Kjøp Nå</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="bouncy-icons">
+        <h2>Its not safe out there, grab a pokeball with a pokemon inside</h2>
+        <div class="icon-container">
+          <div class="icon" id="icon1"><img src="pokeball.png" alt="Gaming Icon"></div>
+          <div class="icon" id="icon2"><img src="pokeball.png" alt="Pokémon Icon"></div>
+          <div class="icon" id="icon3"><img src="pokeball.png" alt="Controller Icon"></div>
+          <div class="icon" id="icon4"><img src="pokeball.png" alt="Retro Icon"></div>
+        </div>
+      </section>
+
     </main>
   </body>
 </html>
